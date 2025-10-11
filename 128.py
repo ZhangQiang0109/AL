@@ -4,8 +4,8 @@ class Solution:
         最长连续序列
         要求时间复杂度为O(n)
         """
-        st = set(nums)  # 把nums转成哈希集合
-        ans = 0
+        st = set(nums)  # 把nums转成哈希集合,去重 O(1)查询
+        ans = 0         # 记录全局最长长度，并返回
         for x in st:  # 遍历哈希集合
             if x-1 in st:   #如果x不是序列的起点，直接跳过
                 continue
